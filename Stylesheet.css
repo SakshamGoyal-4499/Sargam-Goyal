@@ -1,7 +1,7 @@
 /* ===================== THEME ===================== */
 :root {
-  --bg: #f2f5f8;
-  --bg-alt: #e9eef3;
+  --bg: #fdf4d3;
+  --bg-alt: whitesmoke;
   --card: #ffffff;
   --text: #111;
   --muted: #666;
@@ -97,8 +97,12 @@ body,
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #d400b4;
+  color: #800000;
   margin-left: 25px;
+}
+
+[data-theme="dark"] .logo {
+  color: #d400b4;
 }
 
 .nav-links {
@@ -141,8 +145,12 @@ body,
   font-size: 80px;
   margin: 8px 0;
   font-weight: bold;
-  color: #d400b4;
+  color: #800000;
   margin-top: 0;
+}
+
+[data-theme="dark"] #name {
+  color: #d400b4;
 }
 
 #info {
@@ -432,10 +440,12 @@ body,
 #medium {
   height: 18px;
   width: 18px;
+  color: #800000;
+  font-weight: bold;
 }
 
 [data-theme="dark"] #medium {
-  filter: invert(1) brightness(1.2);
+  color: #d400b4;
 }
 
 /* ===== EXPERIENCE TIMELINE ===== */
@@ -460,6 +470,10 @@ body,
   top: 0;
   width: 3px;
   height: 100%;
+  background: #800000;
+}
+
+[data-theme="dark"] .timeline::before {
   background: #d400b4;
 }
 
@@ -478,10 +492,15 @@ body,
   top: 6px;
   width: 14px;
   height: 14px;
-  background: #f2f5f8;
-  border: 3px solid #d400b4;
+  background: #fdf4d3;
+  border: 3px solid #800000;
   border-radius: 50%;
   z-index: 1;
+}
+
+[data-theme="dark"] .timeline-dot {
+  background: #22223b;
+  border-color: #d400b4;
 }
 
 /* content */
@@ -636,7 +655,7 @@ body,
     0 10px 30px rgba(0, 0, 0, 0.08),
     0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 450px;
+  height: 500px;
   width: 500px;
 }
 
@@ -757,7 +776,7 @@ body,
   text-decoration: none;
   color: inherit;
 
-  background: var(--card-bg);
+  background: #ffffff;
   border-radius: 18px;
   overflow: hidden;
 
@@ -864,6 +883,9 @@ body,
     justify-self: center;
   }
 
+  #contact {
+    width: 104%;
+  }
 }
 
 [data-theme="dark"] .project-card {
@@ -873,4 +895,9 @@ body,
 [data-theme="dark"] .project-card span {
   background: #ffffff;
   color: #000;
+}
+
+#names {
+  font-size: 16px;
+  font-weight: normal;
 }
